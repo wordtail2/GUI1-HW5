@@ -1,0 +1,63 @@
+/*
+File: style.css
+GUI Assignment: Implementing a Bit of Scrabble with Drag-and-Drop
+Akshat Thapa, UMass Lowell Computer Science, akshat_thapa@student.uml.edu
+Copyright (c) 2023 by Akshat. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by AT on June 29, 2023 at 9:00 PM
+*/
+/* Page stlying*/
+#board {
+  background-color: rgba(255, 255, 137, 0.89);
+  margin: auto;
+  text-align: center;
+  border-style: solid;
+  border-width: thick;
+}
+/* styling for list within board */
+#board li {
+  list-style: none;
+  display: inline-block;
+}
+/* styling for header message */
+#board h1 {
+  font-weight: bold;
+  padding-top: 5%;
+}
+/* styling for instructions */
+#board p {
+  font-weight: bold;
+}
+/* implementing wood picture to make board more realistic */
+#rack {
+  background-image: url("pictures/woodboard.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 700px;
+  min-height: 100px;
+  margin: auto;
+  text-align: center;
+  border-top: solid;
+  border-width: thick;
+  padding-top: 1%;
+  margin-top: 5%;
+}
+/* styling for blocks on rack */
+#rack img {
+  width: 60px;
+  height: 60px;
+  padding: 5%;
+}
+/* styling for buttons */
+button {
+  border: double;
+  font-weight: bold;
+}
+/* image for blank board */
+.emptyBoard {
+  content: url("pictures/blank_board.jpg");
+}
+/* image for double letter score */
+.doubleLetter {
+  content: url("pictures/double_letterboard.png");
+}

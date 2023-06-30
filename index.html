@@ -1,0 +1,69 @@
+<!--
+File: index.html
+GUI Assignment: Implementing a Bit of Scrabble with Drag-and-Drop
+Akshat Thapa, UMass Lowell Computer Science, akshat_thapa@student.uml.edu
+Copyright (c) 2023 by Akshat. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by AT on June 29, 2023 at 9:00 PM
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Scrabble Board</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- CSS link for Scrabble -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- jQuery/javascript/bootstrap plugins -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <div id="board">
+          <!-- HTML strucutre for Scrabble board -->
+          <h1>Scrabble Board</h1>
+          <br />
+          <p>Place a letter to the first tile to start your word.</p>
+          <div class="row">
+            <div class="col-12">
+              <ul>
+                <!-- HTML structure for board blocks structure -->
+                <li id="spot0" class="emptyBoard"></li>
+                <li id="spot1" class="doubleLetter"></li>
+                <li id="spot2" class="emptyBoard"></li>
+                <li id="spot3" class="emptyBoard"></li>
+                <li id="spot4" class="doubleLetter"></li>
+                <li id="spot5" class="emptyBoard"></li>
+                <li id="spot6" class="emptyBoard"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4" id="score"></div>
+            <!-- Javascript data created held here -->
+            <div class="col-4" id="word"></div>
+            <div class="col-4" id="unused_tiles"></div>
+          </div>
+          <br />
+          <button onclick="suggest_word()">Submit Word</button>
+          <!-- Submit word and restart game buttons -->
+          <button onclick="restart_game()">Restart Game</button>
+          <div class="col-12" id="rack">
+            <!-- generating tiles here -->
+            <ul></ul>
+          </div>
+          <div class="col-12" id="outOfTiles"></div>
+          <!-- outputting message if tiles are exhausted -->
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="scrabble.js"></script>
+    <!--javascript link for scrabble board -->
+  </body>
+</html>
